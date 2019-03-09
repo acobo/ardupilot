@@ -190,7 +190,6 @@ void AP_RangeFinder_TeraRangerI2C::update(void)
         } else if (AP_HAL::millis() - last_reading_ms > 200) {
                set_status(RangeFinder::RangeFinder_NoData);
                }
-        }
         _sem->give();
     }
 }
