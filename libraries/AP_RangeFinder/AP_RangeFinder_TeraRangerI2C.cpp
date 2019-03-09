@@ -155,7 +155,7 @@ bool AP_RangeFinder_TeraRangerI2C::process_raw_measure(uint16_t raw_distance, ui
 }
 
 /*
-  timer called at 20Hz
+  timer called at 20Hz NOW: 100Hz
 */
 void AP_RangeFinder_TeraRangerI2C::timer(void)
 {
@@ -185,7 +185,7 @@ void AP_RangeFinder_TeraRangerI2C::update(void)
             accum.sum = 0;
             accum.count = 0;
             update_status();
-            last_reading_ms = 0;
+            last_reading_ms = AP_HAL::millis();
         } else if (AP_HAL::millis() - last_reading_ms > 200) {  
                       set_status(RangeFinder::RangeFinder_NoData);
         }
