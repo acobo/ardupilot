@@ -37,4 +37,6 @@ private:
         uint32_t sum;
         uint32_t count;
     } accum;
+    
+    uint32_t last_available_ms;
 };
