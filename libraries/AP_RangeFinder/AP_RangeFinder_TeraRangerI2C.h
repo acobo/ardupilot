@@ -21,6 +21,8 @@ protected:
     }
 
 private:
+    
+    uint32_t last_reading_ms;
     // constructor
     AP_RangeFinder_TeraRangerI2C(RangeFinder::RangeFinder_State &_state,
                                  AP_HAL::OwnPtr<AP_HAL::I2CDevice> i2c_dev);
