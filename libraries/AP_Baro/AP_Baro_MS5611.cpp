@@ -364,7 +364,7 @@ void AP_Baro_MS56XX::update()
         _calculate_5607();
         break;
     case BARO_MS5611:
-        _calculate_5611();
+        _calculate_5607(); // OJO!! changed for chinese pixhawk on bixler
         break;
     case BARO_MS5637:
         _calculate_5637();
